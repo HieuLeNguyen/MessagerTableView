@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tabBarMain: UITabBar!
     
     let users: [UserModel] = [
         UserModel(name: "Nguyen Anh Tu", avatar: "user", status: true, subTitle: "Hi, I'm Nguyễn Văn Hiếu", date: "10:00"),

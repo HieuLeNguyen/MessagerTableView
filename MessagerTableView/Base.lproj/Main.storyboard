@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23077.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23077.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KVI-BD-ngC">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23068.1"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tin nhắn-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MessagerTableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,17 +38,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="n8d-lM-0Jh"/>
                                 </connections>
                             </tableView>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ih-gZ-S5D">
-                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="vba-2B-2KO"/>
-                                </constraints>
-                                <items>
-                                    <tabBarItem title="Tin nhắn" image="message" catalog="system" badgeValue="5" id="o0z-RY-8ez"/>
-                                    <tabBarItem systemItem="more" id="ulk-yc-qkh"/>
-                                </items>
-                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.27715748550000002" green="0.56773906949999997" blue="0.96129029990000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,29 +45,97 @@
                             <constraint firstItem="KbY-dA-Sw5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="41M-g3-HXU"/>
                             <constraint firstItem="KbY-dA-Sw5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="59" id="Kdy-Io-bGf"/>
                             <constraint firstItem="KbY-dA-Sw5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MOh-Xk-bbJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9ih-gZ-S5D" secondAttribute="bottom" id="MRA-Jf-BTE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9ih-gZ-S5D" secondAttribute="trailing" id="TaW-sT-uuh"/>
-                            <constraint firstItem="9ih-gZ-S5D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bh7-os-APo"/>
+                            <constraint firstItem="sA1-qG-Zp2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bk9-TH-SFG"/>
                             <constraint firstItem="sA1-qG-Zp2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d73-LQ-i2c"/>
-                            <constraint firstItem="9ih-gZ-S5D" firstAttribute="top" secondItem="sA1-qG-Zp2" secondAttribute="bottom" id="ncv-FG-GMO"/>
                             <constraint firstItem="sA1-qG-Zp2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xuS-o9-ayg"/>
                             <constraint firstItem="sA1-qG-Zp2" firstAttribute="top" secondItem="KbY-dA-Sw5" secondAttribute="bottom" id="y4B-zi-Shl"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Tin nhắn" image="message" catalog="system" badgeValue="4" selectedImage="message.fill" id="k3D-re-fDs"/>
                     <connections>
-                        <outlet property="tabBarMain" destination="9ih-gZ-S5D" id="tpS-Ix-QHr"/>
                         <outlet property="tableView" destination="sA1-qG-Zp2" id="uPH-GN-DsB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="984" y="587"/>
+        </scene>
+        <!--Cài đặt-->
+        <scene sceneID="KmF-Oq-5PF">
+            <objects>
+                <viewController id="R1Y-Td-YUB" customClass="GearViewController" customModule="MessagerTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Yq-Ou-FpW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzY-ev-uho">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" red="0.92941176889999999" green="0.92941176889999999" blue="0.92941176889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="separatorColor" red="0.92941176889999999" green="0.92941176889999999" blue="0.92941176889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexColor" red="0.46666666870000001" green="0.46666666870000001" blue="0.46666666870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.92941176889999999" green="0.92941176889999999" blue="0.92941176889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GearCell" id="fcz-mP-fnK">
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="47.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fcz-mP-fnK" id="n44-gt-xl5">
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="47.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="R1Y-Td-YUB" id="uCG-gi-HwG"/>
+                                    <outlet property="delegate" destination="R1Y-Td-YUB" id="csD-Oj-sgF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="l5i-xr-dz2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KzY-ev-uho" firstAttribute="leading" secondItem="l5i-xr-dz2" secondAttribute="leading" id="BNv-fd-tt6"/>
+                            <constraint firstItem="l5i-xr-dz2" firstAttribute="trailing" secondItem="KzY-ev-uho" secondAttribute="trailing" id="Dyl-Fc-PGl"/>
+                            <constraint firstItem="l5i-xr-dz2" firstAttribute="bottom" secondItem="KzY-ev-uho" secondAttribute="bottom" id="UnP-Q8-JV9"/>
+                            <constraint firstItem="KzY-ev-uho" firstAttribute="top" secondItem="l5i-xr-dz2" secondAttribute="top" id="hNd-6O-HzN"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cài đặt" image="gear" catalog="system" selectedImage="gear" id="SlZ-hu-4Wq"/>
+                    <connections>
+                        <outlet property="gearTableView" destination="KzY-ev-uho" id="ndl-OC-qBF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Xp-BN-ybv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2211" y="588"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="nGp-DI-Zac">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="KVI-BD-ngC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7mA-D8-KRb">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="3t0-pC-J28"/>
+                        <segue destination="R1Y-Td-YUB" kind="relationship" relationship="viewControllers" id="ROe-QL-C5c"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DNa-oM-keM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1599" y="-148"/>
         </scene>
     </scenes>
     <resources>
+        <image name="gear" catalog="system" width="128" height="122"/>
         <image name="message" catalog="system" width="128" height="116"/>
+        <image name="message.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
